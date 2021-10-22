@@ -3,7 +3,7 @@
 <h1 class="pagetitle">TMDB Explorer</h1>
 <div class="filters">
     <div class="searchwrapper">
-        <app-text-field placeholder="Movie" class="textinput" [inputModel]="searchTerm" (inputModelChange)="onTermChange($event)"></app-text-field>
+        <app-text-field placeholder="Movie" class="textinput" [(text)]="searchTerm"></app-text-field>
         <app-button (click)="searchMovies(1)">
             Search
         </app-button>

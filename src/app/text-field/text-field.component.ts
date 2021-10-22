@@ -8,7 +8,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class TextFieldComponent {
 
   @Input() placeholder: string = ''
-  @Input() inputModel: string = '';
-  @Output() inputModelChange = new EventEmitter<string>();
+  @Input() text: string = '';
+  @Output() textChange = new EventEmitter<string>();
+
+  onTextChange(){
+    this.textChange.emit(this.text)
+  }
 
 }

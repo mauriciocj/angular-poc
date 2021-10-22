@@ -47,10 +47,6 @@ export class HomeComponent implements OnInit, OnDestroy  {
       })
   }
 
-  onTermChange(text: string){
-    this.searchTerm = text;
-  }
-
   resetSearch(){
     this.movies = []
     this.searchTerm = ''
