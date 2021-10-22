@@ -1,0 +1,5 @@
+<div class="pagination-component">
+    <app-button (clicked)="onPaginationChange(Direction.previous)">Previous</app-button>
+    <span class="caption">{{ currentPage }} / {{ totalPages }}</span>
+    <app-button (clicked)="onPaginationChange(Direction.next)">Next</app-button>
+</div>

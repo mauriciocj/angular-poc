@@ -1,0 +1,20 @@
+<app-overlay-loader *ngIf="loadingMovies">
+</app-overlay-loader>
+<h1 class="pagetitle">TMDB Explorer</h1>
+<div class="filters">
+    <div class="searchwrapper">
+        <app-text-field placeholder="Movie" class="textinput" [inputModel]="searchTerm" (inputModelChange)="onTermChange($event)"></app-text-field>
+        <app-button (click)="searchMovies(1)">
+            Search
+        </app-button>
+        <app-button (click)="resetSearch()">
+            Clear
+        </app-button>
+    </div>
+    <span class="totalresults" *ngIf="movies.length">{{ totalRecords }} titles found</span>
+    <app-pagination class="pagination" *ngIf="movies.length" (change)="onPaginationChange($event)" [totalPages]="totalPages" [currentPage]="currentPage$.value"></app-pagination>
+</div>
+<div class="cardsgrid">
+    <app-card *ngFor="let movie of movies" [movie]="movie" class="item"></app-card>
+    <span class="caption" *ngIf="!movies.length">Use the text field to search for movie titles.</span>
+</div>

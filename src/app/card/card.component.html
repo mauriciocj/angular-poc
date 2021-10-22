@@ -1,0 +1,10 @@
+<div class="movie-card">
+    <div class="bannerwrapper">
+        <img class="banner" src='https://image.tmdb.org/t/p/w400/{{movie.backdrop_path}}' [title]="movie.title">
+    </div>
+    <div class="details">
+        <h2 class="title">{{ movie.title }}</h2>
+        <span class="caption">{{ movie.release_date }}</span>
+        <p class="overview caption">{{ movie.overview }}</p>
+    </div>
+</div>

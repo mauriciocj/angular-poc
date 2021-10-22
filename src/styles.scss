@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    margin: 2em;
+    background-color: #f8f8f8;
+}
+
+body,html{
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgba(0,0,0,.87);
+}
+
+span, p {
+    color: #2c3b48;
+}
+
+.caption{
+    color: #496173;
+}
+
+input, button {
+    all: unset;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        margin: 1.2em
+    }
+}
