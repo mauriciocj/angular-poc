@@ -1,25 +1,25 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Direction } from '../../types/Pagination' 
+import { Direction } from '../../types/Pagination'; 
 
 @Component({
   selector: 'app-pagination',
   templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.scss']
+  styleUrls: ['./pagination.component.scss'],
 })
 export class PaginationComponent {
 
-  @Input() currentPage: number = 1
-  @Input() totalPages: number = 0
-  @Output() change = new EventEmitter<string>()
+  @Input() currentPage = 1;
 
-  constructor() { }
+  @Input() totalPages = 0;
 
-  get Direction(){
+  @Output() change = new EventEmitter<string>();
+
+  get Direction(): typeof Direction{
     return Direction;
   }
 
   onPaginationChange(direction: string): void{
-    this.change.emit(direction)
+    this.change.emit(direction);
   }
 
 }

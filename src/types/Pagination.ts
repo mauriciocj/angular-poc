@@ -1,4 +1,4 @@
 export enum Direction {
-    next = "next",
-    previous = "previous"
+  next = 'next',
+  previous = 'previous',
 }

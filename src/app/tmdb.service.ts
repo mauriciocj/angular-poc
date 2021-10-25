@@ -1,15 +1,15 @@
-import { HttpClient, HttpParams } from '@angular/common/http'
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from '../environments/environment'
+import { environment } from '../environments/environment';
 import TMDBMovie from 'src/models/TMDBMovie';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TMDBService {
 
-  private baseUrl = 'https://api.themoviedb.org/3/search/movie'
+  private baseUrl = 'https://api.themoviedb.org/3/search/movie';
 
   constructor(private http: HttpClient) { }
 
@@ -17,7 +17,7 @@ export class TMDBService {
     const params = new HttpParams()
       .set('api_key', environment.apiKey)
       .set('query', title)
-      .set('page', page)
-    return this.http.get(`${this.baseUrl}?${params}`)
+      .set('page', page);
+    return this.http.get(`${this.baseUrl}?${params}`);
   }
 }
