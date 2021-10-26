@@ -36,10 +36,10 @@ export class HomeComponent implements OnInit, OnDestroy  {
     });
   }
 
-  searchMovies(page: number = this.currentPage$.value): void {
+  searchMovies(): void {
     this.loadingMovies = true;
     this.tmdbService
-      .getMoviesByTitle(this.searchTerm, page)
+      .getMoviesByTitle(this.searchTerm, this.currentPage$.value)
       .subscribe(
         response => { 
           this.movies = response.results;

@@ -4,7 +4,7 @@
 <div class="filters">
     <div class="searchwrapper">
         <app-text-field placeholder="Movie" class="textinput" [(text)]="searchTerm"></app-text-field>
-        <app-button (click)="searchMovies(1)">
+        <app-button (click)="changePage(1)">
             Search
         </app-button>
         <app-button (click)="resetSearch()">
